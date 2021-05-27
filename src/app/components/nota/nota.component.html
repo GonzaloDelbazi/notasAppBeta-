@@ -1,0 +1,20 @@
+<h2 class="m-4">Crear nueva nota</h2>
+<hr>
+<div class="row">
+    <div class="col mt-3">
+        <form #f="ngForm" (ngSubmit)="guardar(f)">
+            <div class="form-group m-md-2">
+                <label>Titulo de la nota</label>
+                <input class="form-control mt-2" #titulo="ngModel" name="titulo" [(ngModel)]="nota.titulo" style="width: 40%;" type="text" required>
+                <small *ngIf="titulo.invalid && titulo.touched" class="form-text text-danger">La nota debe tener un titulo</small>
+            </div>
+            <div class="form-floating m-md-2">
+                <textarea class="form-control" #cuerpo="ngModel" style="width: 100%;" placeholder="Escriba su nota aqui" id="floatingTextarea" name="desc" [(ngModel)]="nota.desc" required></textarea>
+                <label for="floatingTextarea">Cuerpo de la nota</label>
+                <small *ngIf="cuerpo.invalid && cuerpo.touched" class="form-text text-danger">La nota debe tener un cuerpo</small>
+                <br>
+                <button class="btn btn-outline-secondary mt-2" type="submit">Guardar nota</button>
+            </div>
+        </form>
+    </div>
+</div>

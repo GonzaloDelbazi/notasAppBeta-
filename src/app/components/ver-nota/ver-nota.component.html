@@ -1,0 +1,21 @@
+<h2 class="m-4">Ver/Editar nota</h2>
+<hr>
+<div class="row">
+    <div class="centrar col m-lg-4">
+        <form #f="ngForm">
+            <div class="form-group">
+                <h4>Título</h4>
+                <input class="form-control" type="text" [(ngModel)]="nota.titulo" name="titulo" style="width : 550px;">
+            </div>
+            <br>
+            <div class="form-floating">
+                <h4>Descripción</h4>
+                <textarea class="form-control" id="floatingTextarea" placeholder="Nota" name="desc" id="desc" [(ngModel)]="nota.desc" cols="100%" rows=""></textarea>
+            </div>
+            <div class="col-6">
+                <button class="btn btn-success ml-3" (click)="actualizar(nota)" [routerLink]="['/notas']">Actualizar nota</button>
+                <button class=" btn btn-danger m-3" [routerLink]="[ '/notas'] ">Volver</button>
+            </div>
+        </form>
+    </div>
+</div>

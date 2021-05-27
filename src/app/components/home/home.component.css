@@ -1,0 +1,26 @@
+.img-principal {
+    position: relative;
+}
+
+h2 {
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* .rectangulo {
+    width: 600px;
+    height: 170px;
+    top: 0;
+    margin: 300px;
+    left: 10%;
+    background-color: grey;
+    position: absolute;
+} */
+
+.texto-img {
+    width: 550px;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+}
